@@ -16,3 +16,9 @@ pnpm dev
 
 
  * https://codesandbox.io/s/ne5yjy
+
+
+### Projeto base do next + material ui
+
+https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript
+ 
