@@ -46,7 +46,7 @@ export default function Home() {
                         pt: {
                             xs: `calc(${theme.spacing(2)} + var(--Header-height))`,
                             sm: `calc(${theme.spacing(2)} + var(--Header-height))`,
-                            md: 3,
+                            md: `calc(${theme.spacing(2)} + var(--Header-height))`,
                         },
                         flex: 1,
                         display: 'flex',
@@ -90,9 +90,7 @@ export default function Home() {
                                 Orders
                             </Typography>
                         </Breadcrumbs>
-                        <ColorSchemeToggle
-                            sx={{ ml: 'auto', display: { xs: 'none', md: 'inline-flex' } }}
-                        />
+
                     </Box>
 
                     <Box

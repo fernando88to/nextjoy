@@ -11,6 +11,7 @@ import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import { closeSidebar } from '../util';
+import GlobalStyles from "@mui/joy/GlobalStyles";
 
 export default function SecondSidebar() {
     return (
@@ -62,8 +63,18 @@ export default function SecondSidebar() {
                     [theme.getColorSchemeSelector('dark')]: {
                         bgcolor: 'success.800',
                     },
+                    width:{
+                        md:'var(--SecondSideBar-md-width)'
+                    }
                 })}
             >
+                <GlobalStyles
+                    styles={{
+                        ':root': {
+                            '--SecondSideBar-md-width': '238px',
+                        },
+                    }}
+                />
                 <List
                     sx={{
                         '--List-item-radius': '4px',

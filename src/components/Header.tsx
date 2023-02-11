@@ -9,8 +9,8 @@ import { toggleSidebar } from '../util';
 export default function Header() {
     return (
         <Sheet
-            sx={{
-                display: { xs: 'flex', md: 'none' },
+            sx={(theme) => ({
+                display: { xs: 'flex', md: 'flex' },
                 alignItems: 'center',
                 position: 'fixed',
                 top: 0,
@@ -21,13 +21,16 @@ export default function Header() {
                 px: 2,
                 gap: 1,
                 boxShadow: 'sm',
-            }}>
+                pl: {
+                    md: `calc(var(--FirstSidebar-width) + var(--SecondSideBar-md-width) + ${theme.spacing(2)})`,
+                },
+            })}>
             <GlobalStyles
                 styles={(theme) => ({
                     ':root': {
                         '--Header-height': '52px',
                         [theme.breakpoints.up('md')]: {
-                            '--Header-height': '0px',
+                            '--Header-height': '52px',
                         },
                     },
                 })}
